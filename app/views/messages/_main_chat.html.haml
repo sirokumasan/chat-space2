@@ -1,0 +1,56 @@
+.main
+  .header
+    .header__left
+      .header__left__title
+        グループ名
+      %ul.header__left__members
+        Member:
+        %li.member
+          メンバー名
+        %li.member
+          メンバー名
+        %li.member
+          メンバー名
+    .header__right
+      .header__right__button
+        =link_to "#" do
+          Edit
+
+  .messages
+    .message
+      .message__user
+        .message__user--name
+          メンバー
+        .message__user--time
+          2017/04/04
+      .message__low
+        .message__low__content
+          メッセージ
+    .message
+      .message__user
+        .message__user--name
+          メンバー
+        .message__user--time
+          2017/04/04
+      .message__low
+        .message__low__content
+          メッセージ
+    .message
+      .message__user
+        .message__user--name
+          メンバー
+        .message__user--time
+          2017/04/04
+      .message__low
+        .message__low__content
+          メッセージ
+  
+  
+  .form
+    %form
+      .form__message
+        %input.form__message__text
+        %label.form__message__image
+          = icon('fa','image',class: 'icon')
+          %input.hidden{type: 'file'}
+      %input.form__submit{type: 'submit', value: 'Send'}
