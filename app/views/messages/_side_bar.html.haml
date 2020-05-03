@@ -7,23 +7,24 @@
         = link_to edit_user_path(current_user.id) do
           = icon('fae', 'edit', class: 'icon')
       %li.list
-        = link_to "#" do
+        = link_to new_group_path do
           =  icon('fas', 'bahai', class: 'icon')
 
 
   .groups
-    .group
-      .group__name
-        グループ名
-      .group__message
-        メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        メッセージ
+    - current_user.groups.each do |group|
+      .group
+        .group__name
+          =group.name
+        .group__message
+          =group.messages
+      -# .group
+      -#   .group__name
+      -#     グループ名
+      -#   .group__message
+      -#     メッセージ
+      -# .group
+      -#   .group__name
+      -#     グループ名
+      -#   .group__message
+      -#     メッセージ
