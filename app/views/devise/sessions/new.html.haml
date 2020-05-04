@@ -10,12 +10,12 @@
           .field-label
             = f.label :email
           .field-input
-            = f.email_field :email, autofocus: true
+            = f.email_field :email, autofocus: true, id: "user-email"
           .field
             .field-label
               = f.label :password
               %i (英数字8文字以上)
             .field-input
-              = f.password_field :password, autocomplete: "off"
+              = f.password_field :password, autocomplete: "off", id: "user-password"
           .actions
-            = f.submit "Log in", class: 'btn'
+            = f.submit "Log in", class: 'btn', name: "commit"

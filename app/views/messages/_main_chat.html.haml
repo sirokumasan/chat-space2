@@ -19,8 +19,9 @@
   .form
     = form_for [@group, @message] do |f|
       .form__message
-        = f.text_field :content, class:"form__message__text", placeholder: 'type a message'
+        = f.text_field :content, class:"form__message__text", placeholder: 'type a message',id: "text"
         = f.label :image, class: "form__message__image" do
           = icon('fa','image',class: 'icon')
           =f.file_field :image, class:"hidden"
-        =f.submit 'Send', class:"form__submit"
+      =f.submit 'Send', class:"form__submit", name: "Send"
+      
