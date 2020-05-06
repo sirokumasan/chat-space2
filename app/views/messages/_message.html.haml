@@ -1,5 +1,5 @@
 - @messages.each do |message|
-  .message
+  .message{data: {message: {id: message.id}}}
     .message__user
       .message__user--name
         = message.user.name
